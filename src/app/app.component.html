@@ -1,0 +1,33 @@
+<h1 translate>Title</h1>
+
+<div>
+        {{ 'Intro' | translate:user }}
+</div>
+
+<div>
+  {{ 'Startpage.TranslationSections' | translate }}
+</div>
+
+<div>
+  {{ 'Aboutpage.TranslationSections' | translate }}
+</div>
+
+<br/>
+
+<form>
+  <div class="form-group">
+    <label>Amount</label>
+    <div class="input-group">
+      <div class="input-group-addon">
+        <i class="fa fa-dollar"></i>
+      </div>
+      <input class="form-control" name="amount" [(ngModel)]="amount$" placeholder="Enter amount" (blur)="onBlurMethod($event.target.value)">
+    </div>
+  </div>
+</form>
+
+<div> #{{amount$}}#</div>
+
+<button (click)="switchLanguage('en')">en</button>
+<button (click)="switchLanguage('de')">de</button>
+<button (click)="switchLanguage('fr')">fr</button>
